@@ -27,46 +27,46 @@
 /* 
 -------------------------------------------- */
 window.addEventListener('DOMContentLoaded', () => {
-    let mainContentAll = document.querySelectorAll('.main__content');
-    for (let mainContent of mainContentAll) {
-        let mcN = document.createElement('div');
-        mcN.classList.add('main__content-image');
-            if (Array.from(mainContent.children).some(item => item.closest('img'))) {
-                mainContent.append(mcN);
-            }
-        let mainContentII = mainContent.querySelectorAll('img');
-        for (let mcImg of mainContentII) {
-            mcN.append(mcImg);
-        }
-        
-        /* slider
-        -------------------------------------------- */
-        let i=0;
-        if (i == 0) mainContentII[i].classList.add('show-img');
-        function slider(n) {
-            mainContentII[i].classList.remove('show-img');
-            i = (n + mainContentII.length) %mainContentII.length;
-            mainContentII[i].classList.add('show-img');
-        }
-        function sss() {
-            slider(i+1);
-        }
-        setInterval(sss, 10000);
-
-        let btnLeft = document.createElement('div');
-        btnLeft.classList.add('main__content-btnleft');
-        let btnRight = document.createElement('div');
-        btnRight.classList.add('main__content-btnright');
-
-        if (mainContentII.length > 1) {
-            mcN.append(btnLeft,btnRight);
-        }
-
-        btnLeft.addEventListener('click', () => {
-            slider(i-1);
-        });
-        btnRight.addEventListener('click', () => {    
-            slider(i+1);
-        });
+  let mainContentAll = document.querySelectorAll('.main__content');
+  for (let mainContent of mainContentAll) {
+    let mcN = document.createElement('div');
+    mcN.classList.add('main__content-image');
+    if (Array.from(mainContent.children).some(item => item.closest('img'))) {
+      mainContent.append(mcN);
     }
+    let mainContentII = mainContent.querySelectorAll('img');
+    for (let mcImg of mainContentII) {
+        mcN.append(mcImg);
+    }
+      
+    /* slider
+    -------------------------------------------- */
+    let i=0;
+    if (i == 0) mainContentII[i].classList.add('show-img');
+    function slider(n) {
+      mainContentII[i].classList.remove('show-img');
+      i = (n + mainContentII.length) %mainContentII.length;
+      mainContentII[i].classList.add('show-img');
+    }
+    function sss() {
+      slider(i+1);
+    }
+    setInterval(sss, 10000);
+
+    let btnLeft = document.createElement('div');
+    btnLeft.classList.add('main__content-btnleft');
+    let btnRight = document.createElement('div');
+    btnRight.classList.add('main__content-btnright');
+
+    if (mainContentII.length > 1) {
+      mcN.append(btnLeft,btnRight);
+    }
+
+    btnLeft.addEventListener('click', () => {
+      slider(i-1);
+    });
+    btnRight.addEventListener('click', () => {    
+      slider(i+1);
+    });
+  }
 });
