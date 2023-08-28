@@ -7,6 +7,7 @@ const menu = document.querySelector('.menu'),
     menuLine3 = document.querySelector('.menu__line3');
 
     
+
 window.addEventListener('click', event => {
     if (event.target.closest('.menu') && 
     !aside.closest('.shw')) {
