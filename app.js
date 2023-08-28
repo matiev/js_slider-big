@@ -6,6 +6,7 @@ const menu = document.querySelector('.menu'),
     menuLine2 = document.querySelector('.menu__line2'),
     menuLine3 = document.querySelector('.menu__line3');
 
+
     
 
 window.addEventListener('click', event => {
