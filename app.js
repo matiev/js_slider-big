@@ -1,28 +1,28 @@
 /* Меню и сайтбар
 -------------------------------------------- */
-const menu = document.querySelector('.menu'),
-    aside = document.querySelector('.sidebar'),
-    menuLine1 = document.querySelector('.menu__line1'),
-    menuLine2 = document.querySelector('.menu__line2'),
-    menuLine3 = document.querySelector('.menu__line3');
+// const menu = document.querySelector('.menu'),
+//     aside = document.querySelector('.sidebar'),
+//     menuLine1 = document.querySelector('.menu__line1'),
+//     menuLine2 = document.querySelector('.menu__line2'),
+//     menuLine3 = document.querySelector('.menu__line3');
 
-window.addEventListener('click', event => {
-    if (event.target.closest('.menu') && 
-    !aside.closest('.shw')) {
-        menu.classList.add('active');
-        aside.classList.add('shw');
-        menuLine1.classList.add('active1');
-        menuLine2.classList.add('active2');
-        menuLine3.classList.add('active3');
-    } else if (!event.target.closest('.sidebar') && 
-    aside.closest('.shw')) {
-        menu.classList.remove('active');
-        aside.classList.remove('shw');
-        menuLine1.classList.remove('active1');
-        menuLine2.classList.remove('active2');
-        menuLine3.classList.remove('active3');
-    }
-});
+// window.addEventListener('click', event => {
+//     if (event.target.closest('.menu') && 
+//     !aside.closest('.shw')) {
+//         menu.classList.add('active');
+//         aside.classList.add('shw');
+//         menuLine1.classList.add('active1');
+//         menuLine2.classList.add('active2');
+//         menuLine3.classList.add('active3');
+//     } else if (!event.target.closest('.sidebar') && 
+//     aside.closest('.shw')) {
+//         menu.classList.remove('active');
+//         aside.classList.remove('shw');
+//         menuLine1.classList.remove('active1');
+//         menuLine2.classList.remove('active2');
+//         menuLine3.classList.remove('active3');
+//     }
+// });
 
 /* 
 -------------------------------------------- */
